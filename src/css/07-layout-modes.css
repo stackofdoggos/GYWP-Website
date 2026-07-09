@@ -13,6 +13,10 @@
   display: none;
 }
 
+.entry-gate[hidden] {
+  display: none !important;
+}
+
 .entry-gate__button {
   display: inline-block;
   background: transparent;
@@ -67,6 +71,8 @@ a.entry-gate__button:focus-visible {
 
 .dialogue--placed {
   position: absolute;
+  left: calc(var(--x, 0) * 1%);
+  top: calc(var(--y, 0) * 1%);
   transform: translate(-50%, -50%);
   max-width: 28ch;
   margin: 0;
