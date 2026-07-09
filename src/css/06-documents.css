@@ -1,0 +1,105 @@
+.document {
+  margin: 2rem 0;
+  color: var(--text-on-dark-muted);
+}
+
+.document__speaker {
+  font-weight: 700;
+  color: var(--text-on-dark);
+}
+
+/* Radio / PSA */
+.document--radio {
+  max-width: 36rem;
+  margin-inline: auto;
+  padding-left: 1rem;
+  border-left: 3px solid #333333;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.document--radio .document__line {
+  margin: 0 0 1rem;
+}
+
+.document--radio .document__line--announcer {
+  font-style: italic;
+}
+
+/* Political ad */
+.document--political-ad {
+  max-width: 28rem;
+  margin-inline: auto;
+  padding: 1.25rem 1.5rem;
+  background: #1a1a1a;
+  border: 1px solid #333333;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.document--political-ad .document__tag {
+  margin: 0 0 0.75rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #666666;
+}
+
+/* Newsletter */
+.document--newsletter {
+  max-width: 32rem;
+  margin-inline: auto;
+  padding: 1.5rem;
+  background: #1c1c1c;
+  border: 1px solid #333333;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.document--newsletter .document__masthead {
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #333333;
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--text-on-dark-muted);
+}
+
+.document--newsletter .document__masthead p {
+  margin: 0.15rem 0;
+}
+
+.document--newsletter h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+  color: var(--text-on-dark);
+}
+
+.document--newsletter .document__body p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Fake display ad (article skin) */
+[data-skin="article"] .document--ad {
+  margin: 2rem 0;
+  padding: 1rem 1.25rem;
+  background: #f9fafb;
+  border: 1px solid var(--border-article);
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+[data-skin="article"] .document--ad .document__headline {
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-article-heading);
+}
+
+[data-skin="article"] .document--ad .document__quote {
+  margin: 0.5rem 0;
+  font-style: italic;
+  color: #4b5563;
+}

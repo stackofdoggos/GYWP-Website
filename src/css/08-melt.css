@@ -1,0 +1,89 @@
+/* Pre-melt: narrative hidden on landing */
+.page--landing .narrative-reveal {
+  display: none;
+}
+
+/* CSS-only fallback: #entered reveals chapter list, hides article */
+.page--landing:has(#entered:target) .article-shell {
+  display: none;
+}
+
+.page--landing:has(#entered:target) .narrative-reveal {
+  display: block;
+  animation: fade-in 1s ease;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* JS-driven melt states (Phase 3) */
+.page--landing.is-melting .article-shell {
+  animation: melt-disintegrate var(--duration-melt) var(--ease-melt) forwards;
+}
+
+.page--landing.is-melting .melt-zone__repeat {
+  animation: melt-repeat-grow 2s ease-in forwards;
+}
+
+@keyframes melt-disintegrate {
+  0% {
+    filter: none;
+    opacity: 1;
+    transform: none;
+  }
+  40% {
+    filter: blur(0.5px);
+  }
+  70% {
+    opacity: 0.6;
+    transform: scale(1.02) rotate(0.3deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.08) translateY(2rem);
+    pointer-events: none;
+  }
+}
+
+@keyframes melt-repeat-grow {
+  to {
+    font-size: 1.15em;
+    letter-spacing: -0.02em;
+  }
+}
+
+.page--landing.is-melted .article-shell {
+  display: none;
+}
+
+.page--landing.is-melted .narrative-reveal {
+  display: block;
+  animation: fade-in 1s ease;
+}
+
+.melt-letter {
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page--landing.is-melting .article-shell {
+    animation: none;
+    opacity: 0;
+  }
+
+  .page--landing.is-melting .melt-zone__repeat {
+    animation: none;
+  }
+
+  .page--landing:has(#entered:target) .narrative-reveal,
+  .page--landing.is-melted .narrative-reveal {
+    animation: none;
+  }
+}

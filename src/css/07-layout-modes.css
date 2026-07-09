@@ -1,0 +1,120 @@
+/* Entry gate (hub) */
+.page--hub .entry-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  min-height: 100svh;
+  background: var(--bg-narrative);
+}
+
+.page--hub:has(#main:target) .entry-gate {
+  display: none;
+}
+
+.entry-gate__button {
+  display: inline-block;
+  background: transparent;
+  border: 1px solid var(--text-on-dark-muted);
+  color: var(--text-on-dark);
+  padding: 1rem 2rem;
+  font: inherit;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+button.entry-gate__button {
+  appearance: none;
+}
+
+a.entry-gate__button:hover,
+a.entry-gate__button:focus-visible,
+button.entry-gate__button:hover,
+button.entry-gate__button:focus-visible {
+  border-color: var(--color-ten);
+  color: var(--color-ten);
+}
+
+button.entry-gate__button:focus-visible,
+a.entry-gate__button:focus-visible {
+  outline: 2px solid var(--color-ten);
+  outline-offset: 4px;
+}
+
+/* S-curve spatial scene */
+.spatial-scene {
+  position: relative;
+  width: 100vw;
+  margin: 3rem calc(50% - 50vw);
+  aspect-ratio: 16 / 9;
+  background: #0a0a0a;
+}
+
+.spatial-scene__bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.35;
+}
+
+.spatial-scene__text-layer {
+  position: absolute;
+  inset: 0;
+}
+
+.dialogue--placed {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  max-width: 28ch;
+  margin: 0;
+}
+
+.dialogue--placed[data-x="15"][data-y="72"] {
+  left: 15%;
+  top: 72%;
+}
+
+.dialogue--placed[data-x="42"][data-y="68"] {
+  left: 42%;
+  top: 68%;
+}
+
+.dialogue--placed[data-x="58"][data-y="55"] {
+  left: 58%;
+  top: 55%;
+}
+
+.dialogue--placed[data-x="78"][data-y="38"] {
+  left: 78%;
+  top: 38%;
+}
+
+/* Bottom-up read block */
+.dialogue-block--reverse {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 3rem 0;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border-dark);
+  border-bottom: 1px solid var(--border-dark);
+}
+
+/* Giant interjection */
+.dialogue--mega {
+  font-size: clamp(3rem, 15vw, 12rem);
+  line-height: 0.9;
+  text-align: center;
+}
+
+.dialogue--mega .dialogue__label {
+  display: block;
+  font-size: 0.15em;
+  margin-bottom: 0.25em;
+}
+
+.spatial-scene .dialogue--mega .dialogue__text {
+  font-weight: 700;
+}

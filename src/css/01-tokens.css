@@ -1,0 +1,36 @@
+:root {
+  /* Probe colors */
+  --color-nine: #ff8080;
+  --color-ten: #89dc89;
+  --color-juice: #fef29a;
+
+  /* Human characters */
+  --color-manny: #7eb8da;
+  --color-nick: #d4a5ff;
+  --color-ed: #a8c8ff;
+  --color-tim: #ffb366;
+
+  /* Surfaces */
+  --bg-narrative: #000000;
+  --bg-article: #ffffff;
+  --text-on-dark: #eeeeee;
+  --text-on-dark-muted: #9ca3af;
+  --text-article: #333333;
+  --text-article-heading: #111111;
+  --border-article: #e5e5e5;
+  --border-dark: #222222;
+
+  /* Typography */
+  --font-article: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-narrative: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", Consolas, monospace;
+
+  /* Measure */
+  --measure-dialogue: 42rem;
+  --measure-article: 40rem;
+  --space-dialogue: 0.35em;
+
+  /* Motion */
+  --duration-melt: 4s;
+  --ease-melt: cubic-bezier(0.4, 0, 0.2, 1);
+}

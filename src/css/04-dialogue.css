@@ -1,0 +1,160 @@
+.dialogue {
+  margin: var(--space-dialogue) 0;
+  line-height: 1.5;
+}
+
+.dialogue__label {
+  font-weight: 700;
+  margin-right: 0.35em;
+  color: var(--text-on-dark-muted);
+}
+
+/* 17776: colored text on black */
+[data-dialogue-mode="17776"] .dialogue[data-speaker="nine"] .dialogue__text {
+  color: var(--color-nine);
+}
+
+[data-dialogue-mode="17776"] .dialogue[data-speaker="ten"] .dialogue__text {
+  color: var(--color-ten);
+}
+
+[data-dialogue-mode="17776"] .dialogue[data-speaker="juice"] .dialogue__text {
+  color: var(--color-juice);
+}
+
+[data-dialogue-mode="17776"] .dialogue[data-speaker="ed"] .dialogue__text {
+  color: var(--color-ed);
+}
+
+[data-dialogue-mode="17776"] .dialogue[data-speaker="tim"] .dialogue__text {
+  color: var(--color-tim);
+}
+
+/* 20020: human characters — colored text */
+[data-dialogue-mode="20020"] .dialogue[data-speaker-type="human"][data-speaker="manny"] .dialogue__text {
+  color: var(--color-manny);
+}
+
+[data-dialogue-mode="20020"] .dialogue[data-speaker-type="human"][data-speaker="nick"] .dialogue__text {
+  color: var(--color-nick);
+}
+
+/* 20020: probe highlight blocks */
+[data-dialogue-mode="20020"] .dialogue--probe .dialogue__highlight {
+  color: #000000;
+  padding: 1px 4px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+[data-dialogue-mode="20020"] .dialogue--probe[data-speaker="nine"] .dialogue__highlight {
+  background: var(--color-nine);
+}
+
+[data-dialogue-mode="20020"] .dialogue--probe[data-speaker="ten"] .dialogue__highlight {
+  background: var(--color-ten);
+}
+
+[data-dialogue-mode="20020"] .dialogue--probe[data-speaker="juice"] .dialogue__highlight {
+  background: var(--color-juice);
+}
+
+[data-dialogue-mode="20020"] .dialogue--probe[data-speaker="nine"] {
+  margin-left: 10%;
+}
+
+[data-dialogue-mode="20020"] .dialogue--probe[data-speaker="ten"] {
+  margin-left: 0;
+}
+
+[data-dialogue-mode="20020"] .dialogue--probe[data-speaker="juice"] {
+  margin-left: 20%;
+}
+
+[data-dialogue-mode="20020"] .dialogue--probe .dialogue__label {
+  color: var(--text-on-dark-muted);
+}
+
+/* Voice: Juice */
+.dialogue[data-voice="juice"] .dialogue__text,
+.dialogue[data-speaker="juice"] .dialogue__text {
+  text-transform: lowercase;
+}
+
+/* Emphasis */
+.dialogue[data-emphasis="shout"] .dialogue__text {
+  font-size: 1.35em;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+}
+
+.dialogue__stretch {
+  letter-spacing: 0.15em;
+}
+
+/* Fragments */
+.dialogue--fragment {
+  margin: 0.15em 0;
+}
+
+/* Minimal punctuation voice */
+.dialogue[data-punctuation="minimal"] .dialogue__text {
+  font-style: normal;
+}
+
+/* Stage directions */
+.stage-direction {
+  color: var(--text-on-dark-muted);
+  font-style: italic;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+/* Spatial dialogue (Chapter 20 pattern) */
+.dialogue--spatial[data-align="left"] {
+  text-align: left;
+  margin-right: 30%;
+}
+
+.dialogue--spatial[data-align="right"] {
+  text-align: right;
+  margin-left: 30%;
+  margin-right: 0;
+}
+
+.dialogue--spatial[data-align="right"][data-indent="15"] {
+  margin-left: 15%;
+  margin-right: 0;
+}
+
+.dialogue--spatial[data-align="right"][data-indent="12"] {
+  margin-left: 12%;
+  margin-right: 0;
+}
+
+.dialogue--spatial[data-align="right"][data-indent="5"] {
+  margin-left: 5%;
+  margin-right: 0;
+}
+
+.dialogue--spatial[data-align="left"][data-indent="0"] {
+  margin-left: 0;
+  margin-right: 30%;
+}
+
+/* Placed dialogue on spatial scenes */
+.spatial-scene .dialogue--placed .dialogue__label {
+  color: var(--text-on-dark-muted);
+}
+
+.spatial-scene .dialogue--placed[data-speaker="nine"] .dialogue__text {
+  color: var(--color-nine);
+}
+
+.spatial-scene .dialogue--placed[data-speaker="ten"] .dialogue__text {
+  color: var(--color-ten);
+}
+
+.spatial-scene .dialogue--placed.dialogue--mega .dialogue__text {
+  color: var(--color-nine);
+}
