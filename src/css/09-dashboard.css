@@ -61,6 +61,23 @@
   color: #999999;
 }
 
+.dashboard__credits {
+  margin: 0.85rem 0 0;
+  font-size: 0.8rem;
+  color: #777777;
+}
+
+.dashboard__credits a {
+  color: #999999;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.dashboard__credits a:hover,
+.dashboard__credits a:focus-visible {
+  color: var(--color-ten);
+}
+
 .dashboard__nav {
   margin-top: 1.25rem;
 }

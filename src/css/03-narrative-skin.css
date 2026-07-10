@@ -125,6 +125,25 @@
   background: var(--bg-narrative);
 }
 
+.chapter-credit {
+  max-width: var(--measure-dialogue);
+  margin: 0 auto 0.65rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  color: #666666;
+  text-align: right;
+}
+
+.chapter-credit a {
+  color: #888888;
+  text-decoration: underline;
+}
+
+.chapter-credit a:hover,
+.chapter-credit a:focus-visible {
+  color: #bbbbbb;
+}
+
 .chapter-nav {
   display: flex;
   justify-content: flex-end;

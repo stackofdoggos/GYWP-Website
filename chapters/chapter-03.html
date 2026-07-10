@@ -14,11 +14,6 @@
     <link rel="stylesheet" href="/src/css/07-layout-modes.css" />
   </head>
   <body class="page page--chapter">
-    <!--
-      Speaker registry (20020 mode — no visible labels after chapter 1):
-      ed, tim — human — colored text
-      nine, ten — probe — highlight blocks
-    -->
     <a class="skip-link" href="#main">Skip to content</a>
 
     <main id="main" class="main">
@@ -32,8 +27,34 @@
             <span class="dialogue__label" aria-hidden="true">ED:</span>
             <span class="dialogue__text">
               Louisville used to measure seasons in downs. Now we measure them in creek bends. This
-              interview is for the community archive — the same one the probes mirror when they say
+              interview is for the community archive, the same one the probes mirror when they say
               20026 out loud like it's a prayer.
+            </span>
+          </p>
+
+          <p class="dialogue" data-speaker="tim" data-speaker-type="human">
+            <span class="dialogue__label" aria-hidden="true">TIM:</span>
+            <span class="dialogue__text">Question One on the script. How long have you lived in Louisville?</span>
+          </p>
+
+          <p class="dialogue" data-speaker="ed" data-speaker-type="human">
+            <span class="dialogue__label" aria-hidden="true">ED:</span>
+            <span class="dialogue__text">
+              Long enough that I remember when the Ohio River was just a boundary and not a
+              sideline. Long enough that I stopped counting.
+            </span>
+          </p>
+
+          <p class="dialogue" data-speaker="tim" data-speaker-type="human">
+            <span class="dialogue__label" aria-hidden="true">TIM:</span>
+            <span class="dialogue__text">Question Two. What role does football play in your community?</span>
+          </p>
+
+          <p class="dialogue" data-speaker="ed" data-speaker-type="human">
+            <span class="dialogue__label" aria-hidden="true">ED:</span>
+            <span class="dialogue__text">
+              Same role water plays in a creek. You don't ask the creek why it bends. It bends
+              because something was in the way and it had to keep moving.
             </span>
           </p>
 
@@ -48,7 +69,9 @@
 
           <p class="dialogue dialogue--spatial" data-speaker="tim" data-speaker-type="human" data-align="right" data-indent="15">
             <span class="dialogue__label" aria-hidden="true">TIM:</span>
-            <span class="dialogue__text">Okay … I'm gonna go off-script for Question Three. Why is it called Eleven Jones Cave?</span>
+            <span class="dialogue__text">
+              Okay … I'm gonna go off-script for Question Three. Why is it called Eleven Jones Cave?
+            </span>
           </p>
 
           <p class="dialogue dialogue--spatial" data-speaker="ed" data-speaker-type="human" data-align="left" data-indent="0">
@@ -97,12 +120,32 @@
           <p class="dialogue dialogue--spatial" data-speaker="ed" data-speaker-type="human" data-align="left" data-indent="0">
             <span class="dialogue__label" aria-hidden="true">ED:</span>
             <span class="dialogue__text">
-              Before we go back to your script — and you can step away now, by the way — I need to
+              You wanted folklore. I don't have folklore. I have limestone and a family that liked
+              holes in the ground. The sons mapped this cave with candles. One of them died in here.
+              Not dramatically. He just stayed too long and his candle went out and he couldn't find
+              the turn he'd memorized wrong.
+            </span>
+          </p>
+
+          <p class="dialogue dialogue--spatial" data-speaker="tim" data-speaker-type="human" data-align="right" data-indent="12">
+            <span class="dialogue__label" aria-hidden="true">TIM:</span>
+            <span class="dialogue__text">Which son?</span>
+          </p>
+
+          <p class="dialogue dialogue--spatial" data-speaker="ed" data-speaker-type="human" data-align="left" data-indent="0">
+            <span class="dialogue__label" aria-hidden="true">ED:</span>
+            <span class="dialogue__text">The fourth one. They didn't stop exploring after that.</span>
+          </p>
+
+          <p class="dialogue dialogue--spatial" data-speaker="ed" data-speaker-type="human" data-align="left" data-indent="0">
+            <span class="dialogue__label" aria-hidden="true">ED:</span>
+            <span class="dialogue__text">
+              Before we go back to your script, and you can step away now, by the way, I need to
               warn whoever is reading this.
             </span>
           </p>
 
-          <p class="dialogue dialogue--spatial" data-speaker="tim" data-speaker-type="human" data-align="right" data-indent="15">
+          <p class="dialogue dialogue--spatial" data-speaker="tim" data-speaker-type="human" data-align="right" data-indent="8">
             <span class="dialogue__label" aria-hidden="true">TIM:</span>
             <span class="dialogue__text">Warn them about what?</span>
           </p>
@@ -115,17 +158,69 @@
             </span>
           </p>
 
-          <figure class="media media--full" data-reveal="scroll" data-lazy="true">
+          <p class="dialogue dialogue--spatial" data-speaker="ed" data-speaker-type="human" data-align="left" data-indent="0">
+            <span class="dialogue__label" aria-hidden="true">ED:</span>
+            <span class="dialogue__text">
+              If you're reading this because you saw a pin on a map or heard a rumor about a secret
+              entrance near the creek, stop. Turn around. Go get a sandwich. The cave is not a
+              destination. It's a mistake people made when they didn't have television yet.
+            </span>
+          </p>
+
+          <p class="dialogue dialogue--spatial" data-speaker="tim" data-speaker-type="human" data-align="right" data-indent="15">
+            <span class="dialogue__label" aria-hidden="true">TIM:</span>
+            <span class="dialogue__text">Can I step away now?</span>
+          </p>
+
+          <p class="dialogue dialogue--spatial" data-speaker="ed" data-speaker-type="human" data-align="left" data-indent="0">
+            <span class="dialogue__label" aria-hidden="true">ED:</span>
+            <span class="dialogue__text">Yeah. Go stand by the creek. I'll finish from down here.</span>
+          </p>
+
+          <aside class="document document--archive">
+            <p class="document__tag">Community archive, transcript note</p>
+            <p>
+              At this point in the recording, Tim Krieger's microphone picks up creek noise and a
+              distant whistle. Ed Krieger's audio continues from a secondary channel labeled
+              <span class="mono">CAVE-2</span>. Field overlap detected on three adjacent grids.
+            </p>
+          </aside>
+
+          <figure class="media media--full media--fried" data-reveal="scroll" data-lazy="true">
             <img
-              data-src="/src/assets/images/placeholder-16x9.svg"
-              src="/src/assets/images/placeholder-16x9.svg"
-              alt="Aerial view of Louisville and the creek fork described in the chapter"
-              width="1920"
-              height="1080"
+              data-src="/src/assets/images/louisville-aerial-fried.jpg"
+              src="/src/assets/images/louisville-aerial-fried.jpg"
+              alt="Aerial view of Louisville with the creek fork described in the chapter"
+              width="1280"
+              height="720"
               loading="lazy"
               decoding="async"
             />
           </figure>
+
+          <p class="dialogue dialogue--spatial" data-speaker="ed" data-speaker-type="human" data-align="left" data-indent="0">
+            <span class="dialogue__label" aria-hidden="true">ED:</span>
+            <span class="dialogue__text">
+              Question Four, if you're still taking notes. The field here follows the creek because
+              the creek was already a path. Players run the banks when the water's low. When it's
+              high they run the bridges, and the bridges count as part of the field if two towns
+              agreed on it at a potluck in 1988.
+            </span>
+          </p>
+
+          <p class="dialogue dialogue--spatial" data-speaker="tim" data-speaker-type="human" data-align="right" data-indent="15">
+            <span class="dialogue__label" aria-hidden="true">TIM:</span>
+            <span class="dialogue__text">I'm still taking notes.</span>
+          </p>
+
+          <p class="dialogue dialogue--spatial" data-speaker="ed" data-speaker-type="human" data-align="left" data-indent="0">
+            <span class="dialogue__label" aria-hidden="true">ED:</span>
+            <span class="dialogue__text">
+              Good. Write down that the end zone is somewhere near Jeffersonville and nobody's sure
+              which side of the river that puts it on. Write down that the game has been going for
+              so long that the players inherit positions like surnames.
+            </span>
+          </p>
 
           <section
             class="spatial-scene"
@@ -133,40 +228,136 @@
             aria-label="Conversation across landscape"
           >
             <img
-              class="spatial-scene__bg"
-              src="/src/assets/images/placeholder-16x9.svg"
+              class="spatial-scene__bg spatial-scene__bg--fried"
+              src="/src/assets/images/louisville-aerial-fried.jpg"
               alt=""
               role="presentation"
-              width="1920"
-              height="1080"
+              width="1280"
+              height="720"
             />
             <div class="spatial-scene__text-layer">
-              <p class="dialogue dialogue--probe dialogue--placed" data-speaker="nine" data-speaker-type="probe" data-x="15" data-y="72">
+              <p class="dialogue dialogue--probe dialogue--placed" data-speaker="nine" data-speaker-type="probe" data-x="12" data-y="78">
                 <span class="dialogue__label" aria-hidden="true">NINE:</span>
                 <span class="dialogue__text">
                   <span class="dialogue__highlight">Uh, the readability of this is kinda</span>
                 </span>
               </p>
-              <p class="dialogue dialogue--probe dialogue--placed" data-speaker="ten" data-speaker-type="probe" data-x="42" data-y="68">
+              <p class="dialogue dialogue--probe dialogue--placed" data-speaker="ten" data-speaker-type="probe" data-x="38" data-y="72">
                 <span class="dialogue__label" aria-hidden="true">TEN:</span>
                 <span class="dialogue__text">
                   <span class="dialogue__highlight">Please stop talking.</span>
                 </span>
               </p>
-              <p class="dialogue dialogue--probe dialogue--placed" data-speaker="nine" data-speaker-type="probe" data-x="58" data-y="55">
+              <p class="dialogue dialogue--probe dialogue--placed" data-speaker="nine" data-speaker-type="probe" data-x="55" data-y="58">
                 <span class="dialogue__label" aria-hidden="true">NINE:</span>
                 <span class="dialogue__text">
                   <span class="dialogue__highlight">Okay.</span>
                 </span>
               </p>
-              <p class="dialogue dialogue--probe dialogue--placed dialogue--mega" data-speaker="nine" data-speaker-type="probe" data-x="78" data-y="38">
+              <p class="dialogue dialogue--probe dialogue--placed" data-speaker="juice" data-speaker-type="probe" data-voice="juice" data-x="22" data-y="48">
+                <span class="dialogue__label" aria-hidden="true">JUICE:</span>
+                <span class="dialogue__text">
+                  <span class="dialogue__highlight">tim's on the right ed's on the left. classic layout</span>
+                </span>
+              </p>
+              <p class="dialogue dialogue--probe dialogue--placed" data-speaker="ten" data-speaker-type="probe" data-x="48" data-y="42">
+                <span class="dialogue__label" aria-hidden="true">TEN:</span>
+                <span class="dialogue__text">
+                  <span class="dialogue__highlight">Juice, nobody asked you.</span>
+                </span>
+              </p>
+              <p class="dialogue dialogue--probe dialogue--placed dialogue--mega" data-speaker="nine" data-speaker-type="probe" data-x="74" data-y="32">
                 <span class="dialogue__label" aria-hidden="true">NINE:</span>
                 <span class="dialogue__text">
                   <span class="dialogue__highlight">WHY</span>
                 </span>
               </p>
+              <p class="dialogue dialogue--probe dialogue--placed" data-speaker="ten" data-speaker-type="probe" data-x="62" data-y="22">
+                <span class="dialogue__label" aria-hidden="true">TEN:</span>
+                <span class="dialogue__text">
+                  <span class="dialogue__highlight">Why what?</span>
+                </span>
+              </p>
+              <p class="dialogue dialogue--probe dialogue--placed" data-speaker="nine" data-speaker-type="probe" data-x="82" data-y="18">
+                <span class="dialogue__label" aria-hidden="true">NINE:</span>
+                <span class="dialogue__text">
+                  <span class="dialogue__highlight">WHY IS THE TEXT IN THE SKY</span>
+                </span>
+              </p>
             </div>
           </section>
+
+          <p class="dialogue dialogue--probe" data-speaker="ten" data-speaker-type="probe">
+            <span class="dialogue__label" aria-hidden="true">TEN:</span>
+            <span class="dialogue__text">
+              <span class="dialogue__highlight">
+                Ed put Tim on one side of the creek and himself in a hole. We're just showing you
+                where they are.
+              </span>
+            </span>
+          </p>
+
+          <p class="dialogue dialogue--probe" data-speaker="nine" data-speaker-type="probe">
+            <span class="dialogue__label" aria-hidden="true">NINE:</span>
+            <span class="dialogue__text">
+              <span class="dialogue__highlight">I hate maps</span>
+            </span>
+          </p>
+
+          <p class="dialogue dialogue--probe" data-speaker="juice" data-speaker-type="probe" data-voice="juice">
+            <span class="dialogue__label" aria-hidden="true">JUICE:</span>
+            <span class="dialogue__text">
+              <span class="dialogue__highlight">
+                louisville field length is <span class="mono">892,441</span> yards if you measure
+                along the creek. if you measure as the crow flies it's like <span class="mono">12</span>
+              </span>
+            </span>
+          </p>
+
+          <p class="dialogue dialogue--probe" data-speaker="ten" data-speaker-type="probe">
+            <span class="dialogue__label" aria-hidden="true">TEN:</span>
+            <span class="dialogue__text">
+              <span class="dialogue__highlight">That's not how fields work and you know it.</span>
+            </span>
+          </p>
+
+          <p class="dialogue dialogue--probe" data-speaker="juice" data-speaker-type="probe" data-voice="juice">
+            <span class="dialogue__label" aria-hidden="true">JUICE:</span>
+            <span class="dialogue__text">
+              <span class="dialogue__highlight">im just saying crows don't play football. they win every time</span>
+            </span>
+          </p>
+
+          <p class="dialogue dialogue--spatial" data-speaker="tim" data-speaker-type="human" data-align="right" data-indent="15">
+            <span class="dialogue__label" aria-hidden="true">TIM:</span>
+            <span class="dialogue__text">Ed? You still there?</span>
+          </p>
+
+          <p class="dialogue dialogue--spatial" data-speaker="ed" data-speaker-type="human" data-align="left" data-indent="0">
+            <span class="dialogue__label" aria-hidden="true">ED:</span>
+            <span class="dialogue__text">Still here. Question Five was about legacy. I'll answer it anyway.</span>
+          </p>
+
+          <p class="dialogue dialogue--spatial" data-speaker="ed" data-speaker-type="human" data-align="left" data-indent="0">
+            <span class="dialogue__label" aria-hidden="true">ED:</span>
+            <span class="dialogue__text">
+              Legacy is what you leave when you stop. We don't stop. So legacy is just … the mud on
+              your shoes from the last play. You don't get a statue. You get a wet sock.
+            </span>
+          </p>
+
+          <p class="dialogue dialogue--spatial" data-speaker="tim" data-speaker-type="human" data-align="right" data-indent="10">
+            <span class="dialogue__label" aria-hidden="true">TIM:</span>
+            <span class="dialogue__text">That's not very inspiring.</span>
+          </p>
+
+          <p class="dialogue dialogue--spatial" data-speaker="ed" data-speaker-type="human" data-align="left" data-indent="0">
+            <span class="dialogue__label" aria-hidden="true">ED:</span>
+            <span class="dialogue__text">
+              I didn't agree to inspire you. I agreed to sit in a cave and tell the truth into a
+              microphone so the satellites have something to misquote later.
+            </span>
+          </p>
 
           <section
             class="dialogue-block dialogue-block--reverse"
@@ -191,12 +382,61 @@
                 <span class="dialogue__highlight">But okay.</span>
               </span>
             </p>
+            <p class="dialogue dialogue--probe" data-speaker="juice" data-speaker-type="probe" data-voice="juice">
+              <span class="dialogue__label" aria-hidden="true">JUICE:</span>
+              <span class="dialogue__text">
+                <span class="dialogue__highlight">
+                  ed's still talking btw. he's been talking for eleven minutes straight and tim's
+                  given up on the script entirely
+                </span>
+              </span>
+            </p>
+            <p class="dialogue dialogue--probe" data-speaker="ten" data-speaker-type="probe">
+              <span class="dialogue__label" aria-hidden="true">TEN:</span>
+              <span class="dialogue__text">
+                <span class="dialogue__highlight">
+                  Good. The script was for a town that doesn't exist anymore. Ed's still talking
+                  anyway.
+                </span>
+              </span>
+            </p>
+            <p class="dialogue dialogue--probe" data-speaker="nine" data-speaker-type="probe">
+              <span class="dialogue__label" aria-hidden="true">NINE:</span>
+              <span class="dialogue__text">
+                <span class="dialogue__highlight">What creek</span>
+              </span>
+            </p>
+            <p class="dialogue dialogue--probe" data-speaker="ten" data-speaker-type="probe">
+              <span class="dialogue__label" aria-hidden="true">TEN:</span>
+              <span class="dialogue__text">
+                <span class="dialogue__highlight">Beargrass Creek. The one Ed won't shut up about.</span>
+              </span>
+            </p>
+            <p class="dialogue dialogue--spatial" data-speaker="ed" data-speaker-type="human" data-align="left" data-indent="0">
+              <span class="dialogue__label" aria-hidden="true">ED:</span>
+              <span class="dialogue__text">
+                Tim, when you pack up, leave the ladder. Somebody else will need it and I won't.
+              </span>
+            </p>
+            <p class="dialogue dialogue--spatial" data-speaker="tim" data-speaker-type="human" data-align="right" data-indent="15">
+              <span class="dialogue__label" aria-hidden="true">TIM:</span>
+              <span class="dialogue__text">You're not coming up?</span>
+            </p>
+            <p class="dialogue dialogue--spatial" data-speaker="ed" data-speaker-type="human" data-align="left" data-indent="0">
+              <span class="dialogue__label" aria-hidden="true">ED:</span>
+              <span class="dialogue__text">I'll listen from down here. The cave has good acoustics for football.</span>
+            </p>
           </section>
         </div>
       </article>
     </main>
 
     <footer class="site-footer">
+      <p class="chapter-credit">
+        chapter 3 adapted from Louisville scenes in
+        <a href="https://www.sbnation.com/c/secret-base/21410129/20020" rel="noopener noreferrer" target="_blank">20020</a>
+        by Jon Bois
+      </p>
       <nav class="chapter-nav" aria-label="Chapter navigation">
         <a rel="prev" href="/chapters/chapter-02.html">Previous</a>
         <a href="/">Home</a>
