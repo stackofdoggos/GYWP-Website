@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-skin="narrative" data-dialogue-mode="17776" data-layout="spatial">
+<html lang="en" data-skin="narrative" data-dialogue-mode="20020" data-layout="spatial">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -15,9 +15,9 @@
   </head>
   <body class="page page--chapter">
     <!--
-      Speaker registry (spatial chapter):
-      ed  — human — left-aligned dialogue
-      tim — human — right-aligned dialogue, indent shifts when "moving closer"
+      Speaker registry (20020 mode — no visible labels after chapter 1):
+      ed, tim — human — colored text
+      nine, ten — probe — highlight blocks
     -->
     <a class="skip-link" href="#main">Skip to content</a>
 
@@ -28,7 +28,16 @@
         </header>
 
         <div class="chapter__content">
-          <p class="dialogue" data-speaker="ed">
+          <p class="dialogue" data-speaker="ed" data-speaker-type="human">
+            <span class="dialogue__label" aria-hidden="true">ED:</span>
+            <span class="dialogue__text">
+              Louisville used to measure seasons in downs. Now we measure them in creek bends. This
+              interview is for the community archive — the same one the probes mirror when they say
+              GYWP out loud like it's a prayer.
+            </span>
+          </p>
+
+          <p class="dialogue" data-speaker="ed" data-speaker-type="human">
             <span class="dialogue__label" aria-hidden="true">ED:</span>
             <span class="dialogue__text">
               So you're standing next to the south fork of Beargrass Creek, which runs all around
@@ -37,42 +46,42 @@
             </span>
           </p>
 
-          <p class="dialogue dialogue--spatial" data-speaker="tim" data-align="right" data-indent="15">
+          <p class="dialogue dialogue--spatial" data-speaker="tim" data-speaker-type="human" data-align="right" data-indent="15">
             <span class="dialogue__label" aria-hidden="true">TIM:</span>
             <span class="dialogue__text">Okay … I'm gonna go off-script for Question Three. Why is it called Eleven Jones Cave?</span>
           </p>
 
-          <p class="dialogue dialogue--spatial" data-speaker="ed" data-align="left" data-indent="0">
+          <p class="dialogue dialogue--spatial" data-speaker="ed" data-speaker-type="human" data-align="left" data-indent="0">
             <span class="dialogue__label" aria-hidden="true">ED:</span>
             <span class="dialogue__text">I'll answer that, but before I do, there's something we need to do.</span>
           </p>
 
-          <p class="dialogue dialogue--spatial" data-speaker="ed" data-align="left" data-indent="0">
+          <p class="dialogue dialogue--spatial" data-speaker="ed" data-speaker-type="human" data-align="left" data-indent="0">
             <span class="dialogue__label" aria-hidden="true">ED:</span>
             <span class="dialogue__text">Here. Come over here.</span>
           </p>
 
-          <p class="dialogue dialogue--spatial" data-speaker="tim" data-align="right" data-indent="12">
+          <p class="dialogue dialogue--spatial" data-speaker="tim" data-speaker-type="human" data-align="right" data-indent="12">
             <span class="dialogue__label" aria-hidden="true">TIM:</span>
             <span class="dialogue__text">Here?</span>
           </p>
 
-          <p class="dialogue dialogue--spatial" data-speaker="ed" data-align="left" data-indent="0">
+          <p class="dialogue dialogue--spatial" data-speaker="ed" data-speaker-type="human" data-align="left" data-indent="0">
             <span class="dialogue__label" aria-hidden="true">ED:</span>
             <span class="dialogue__text">Closer, closer. Just for a second. Get in the shot.</span>
           </p>
 
-          <p class="dialogue dialogue--spatial" data-speaker="tim" data-align="right" data-indent="5">
+          <p class="dialogue dialogue--spatial" data-speaker="tim" data-speaker-type="human" data-align="right" data-indent="5">
             <span class="dialogue__label" aria-hidden="true">TIM:</span>
             <span class="dialogue__text">Here?</span>
           </p>
 
-          <p class="dialogue dialogue--spatial" data-speaker="ed" data-align="left" data-indent="0">
+          <p class="dialogue dialogue--spatial" data-speaker="ed" data-speaker-type="human" data-align="left" data-indent="0">
             <span class="dialogue__label" aria-hidden="true">ED:</span>
             <span class="dialogue__text">That'll work.</span>
           </p>
 
-          <p class="dialogue dialogue--spatial" data-speaker="ed" data-align="left" data-indent="0">
+          <p class="dialogue dialogue--spatial" data-speaker="ed" data-speaker-type="human" data-align="left" data-indent="0">
             <span class="dialogue__label" aria-hidden="true">ED:</span>
             <span class="dialogue__text">
               Eleven Jones was a man who lived in Louisville in the nineteenth century. He had eleven
@@ -80,12 +89,12 @@
             </span>
           </p>
 
-          <p class="dialogue dialogue--spatial" data-speaker="tim" data-align="right" data-indent="15">
+          <p class="dialogue dialogue--spatial" data-speaker="tim" data-speaker-type="human" data-align="right" data-indent="15">
             <span class="dialogue__label" aria-hidden="true">TIM:</span>
             <span class="dialogue__text">That's disappointingly straightforward.</span>
           </p>
 
-          <p class="dialogue dialogue--spatial" data-speaker="ed" data-align="left" data-indent="0">
+          <p class="dialogue dialogue--spatial" data-speaker="ed" data-speaker-type="human" data-align="left" data-indent="0">
             <span class="dialogue__label" aria-hidden="true">ED:</span>
             <span class="dialogue__text">
               Before we go back to your script — and you can step away now, by the way — I need to
@@ -93,12 +102,12 @@
             </span>
           </p>
 
-          <p class="dialogue dialogue--spatial" data-speaker="tim" data-align="right" data-indent="15">
+          <p class="dialogue dialogue--spatial" data-speaker="tim" data-speaker-type="human" data-align="right" data-indent="15">
             <span class="dialogue__label" aria-hidden="true">TIM:</span>
             <span class="dialogue__text">Warn them about what?</span>
           </p>
 
-          <p class="dialogue dialogue--spatial" data-speaker="ed" data-align="left" data-indent="0">
+          <p class="dialogue dialogue--spatial" data-speaker="ed" data-speaker-type="human" data-align="left" data-indent="0">
             <span class="dialogue__label" aria-hidden="true">ED:</span>
             <span class="dialogue__text">
               About Eleven Jones Cave. Don't come down here. There's nothing down here. It's wet and
@@ -132,21 +141,29 @@
               height="1080"
             />
             <div class="spatial-scene__text-layer">
-              <p class="dialogue dialogue--placed" data-speaker="nine" data-x="15" data-y="72">
+              <p class="dialogue dialogue--probe dialogue--placed" data-speaker="nine" data-speaker-type="probe" data-x="15" data-y="72">
                 <span class="dialogue__label" aria-hidden="true">NINE:</span>
-                <span class="dialogue__text">Uh, the readability of this is kinda</span>
+                <span class="dialogue__text">
+                  <span class="dialogue__highlight">Uh, the readability of this is kinda</span>
+                </span>
               </p>
-              <p class="dialogue dialogue--placed" data-speaker="ten" data-x="42" data-y="68">
+              <p class="dialogue dialogue--probe dialogue--placed" data-speaker="ten" data-speaker-type="probe" data-x="42" data-y="68">
                 <span class="dialogue__label" aria-hidden="true">TEN:</span>
-                <span class="dialogue__text">Shut the fuck up.</span>
+                <span class="dialogue__text">
+                  <span class="dialogue__highlight">Please stop talking.</span>
+                </span>
               </p>
-              <p class="dialogue dialogue--placed" data-speaker="nine" data-x="58" data-y="55">
+              <p class="dialogue dialogue--probe dialogue--placed" data-speaker="nine" data-speaker-type="probe" data-x="58" data-y="55">
                 <span class="dialogue__label" aria-hidden="true">NINE:</span>
-                <span class="dialogue__text">Okay.</span>
+                <span class="dialogue__text">
+                  <span class="dialogue__highlight">Okay.</span>
+                </span>
               </p>
-              <p class="dialogue dialogue--placed dialogue--mega" data-speaker="nine" data-x="78" data-y="38">
+              <p class="dialogue dialogue--probe dialogue--placed dialogue--mega" data-speaker="nine" data-speaker-type="probe" data-x="78" data-y="38">
                 <span class="dialogue__label" aria-hidden="true">NINE:</span>
-                <span class="dialogue__text">WHY</span>
+                <span class="dialogue__text">
+                  <span class="dialogue__highlight">WHY</span>
+                </span>
               </p>
             </div>
           </section>
@@ -156,17 +173,23 @@
             data-read-direction="bottom-up"
             aria-label="Read from bottom to top"
           >
-            <p class="dialogue" data-speaker="ten">
+            <p class="dialogue dialogue--probe" data-speaker="ten" data-speaker-type="probe">
               <span class="dialogue__label" aria-hidden="true">TEN:</span>
-              <span class="dialogue__text">We're drifting upward now. You'll have to read from the bottom.</span>
+              <span class="dialogue__text">
+                <span class="dialogue__highlight">We're drifting upward now. You'll have to read from the bottom.</span>
+              </span>
             </p>
-            <p class="dialogue" data-speaker="nine">
+            <p class="dialogue dialogue--probe" data-speaker="nine" data-speaker-type="probe">
               <span class="dialogue__label" aria-hidden="true">NINE:</span>
-              <span class="dialogue__text">That's not how reading works.</span>
+              <span class="dialogue__text">
+                <span class="dialogue__highlight">That's not how reading works.</span>
+              </span>
             </p>
-            <p class="dialogue" data-speaker="nine">
+            <p class="dialogue dialogue--probe" data-speaker="nine" data-speaker-type="probe">
               <span class="dialogue__label" aria-hidden="true">NINE:</span>
-              <span class="dialogue__text">But okay.</span>
+              <span class="dialogue__text">
+                <span class="dialogue__highlight">But okay.</span>
+              </span>
             </p>
           </section>
         </div>
@@ -176,6 +199,7 @@
     <footer class="site-footer">
       <nav class="chapter-nav" aria-label="Chapter navigation">
         <a rel="prev" href="/chapters/chapter-02.html">Previous</a>
+        <a href="/">Home</a>
         <a href="/hub.html">All chapters</a>
         <a rel="next" href="/chapters/chapter-04.html">Next</a>
       </nav>

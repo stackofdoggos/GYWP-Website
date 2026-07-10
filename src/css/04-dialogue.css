@@ -30,7 +30,19 @@
   color: var(--color-tim);
 }
 
-/* 20020: human characters — colored text */
+/* 20020: hide speaker labels — color and position indicate voice */
+[data-dialogue-mode="20020"] .dialogue__label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 [data-dialogue-mode="20020"] .dialogue[data-speaker-type="human"][data-speaker="manny"] .dialogue__text {
   color: var(--color-manny);
 }
@@ -39,10 +51,36 @@
   color: var(--color-nick);
 }
 
+[data-dialogue-mode="20020"] .dialogue[data-speaker-type="human"][data-speaker="ed"] .dialogue__text {
+  color: var(--color-ed);
+}
+
+[data-dialogue-mode="20020"] .dialogue[data-speaker-type="human"][data-speaker="tim"] .dialogue__text {
+  color: var(--color-tim);
+}
+
+[data-dialogue-mode="20020"] .dialogue[data-speaker-type="human"] {
+  margin: 0.85rem 0;
+  line-height: 1.55;
+}
+
 /* 20020: probe highlight blocks */
+[data-dialogue-mode="20020"] .dialogue--probe {
+  margin: 0.75rem 0;
+  line-height: 1.45;
+}
+
+[data-dialogue-mode="20020"] .dialogue--probe .dialogue__text {
+  display: block;
+  margin: 0;
+}
+
 [data-dialogue-mode="20020"] .dialogue--probe .dialogue__highlight {
+  display: inline-block;
+  max-width: 100%;
+  padding: 0.2em 0.35em;
   color: #000000;
-  padding: 1px 4px;
+  line-height: 1.45;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
@@ -59,20 +97,29 @@
   background: var(--color-juice);
 }
 
+/* Nine — indented middle-left */
 [data-dialogue-mode="20020"] .dialogue--probe[data-speaker="nine"] {
-  margin-left: 10%;
+  margin-left: 15%;
+  margin-right: 5%;
+  text-align: left;
 }
 
+/* Ten — flush left */
 [data-dialogue-mode="20020"] .dialogue--probe[data-speaker="ten"] {
   margin-left: 0;
+  margin-right: 10%;
+  text-align: left;
 }
 
+/* Juice — centered */
 [data-dialogue-mode="20020"] .dialogue--probe[data-speaker="juice"] {
-  margin-left: 20%;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
 }
 
-[data-dialogue-mode="20020"] .dialogue--probe .dialogue__label {
-  color: var(--text-on-dark-muted);
+[data-dialogue-mode="20020"] .dialogue--probe .dialogue__highlight .mono {
+  color: inherit;
 }
 
 /* Voice: Juice */
@@ -142,19 +189,38 @@
   margin-right: 30%;
 }
 
-/* Placed dialogue on spatial scenes */
+/* Placed dialogue on spatial scenes (17776 colored text fallback) */
 .spatial-scene .dialogue--placed .dialogue__label {
   color: var(--text-on-dark-muted);
 }
 
-.spatial-scene .dialogue--placed[data-speaker="nine"] .dialogue__text {
+[data-dialogue-mode="17776"] .spatial-scene .dialogue--placed[data-speaker="nine"] .dialogue__text {
   color: var(--color-nine);
 }
 
-.spatial-scene .dialogue--placed[data-speaker="ten"] .dialogue__text {
+[data-dialogue-mode="17776"] .spatial-scene .dialogue--placed[data-speaker="ten"] .dialogue__text {
   color: var(--color-ten);
 }
 
-.spatial-scene .dialogue--placed.dialogue--mega .dialogue__text {
+[data-dialogue-mode="17776"] .spatial-scene .dialogue--placed.dialogue--mega .dialogue__text {
   color: var(--color-nine);
+}
+
+/* 20020 probe blocks on spatial scenes */
+[data-dialogue-mode="20020"] .spatial-scene .dialogue--placed {
+  margin: 0;
+  text-align: left;
+}
+
+[data-dialogue-mode="20020"] .spatial-scene .dialogue--placed[data-speaker="nine"] {
+  margin-left: 0;
+}
+
+[data-dialogue-mode="20020"] .spatial-scene .dialogue--placed[data-speaker="ten"] {
+  margin-left: 0;
+}
+
+[data-dialogue-mode="20020"] .spatial-scene .dialogue--placed.dialogue--mega .dialogue__highlight {
+  font-size: clamp(1.5rem, 6vw, 4rem);
+  font-weight: 700;
 }

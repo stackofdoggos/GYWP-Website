@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-skin="narrative" data-dialogue-mode="17776">
+<html lang="en" data-skin="narrative" data-dialogue-mode="20020">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -40,24 +40,45 @@
             </div>
           </figure>
 
-          <p class="dialogue" data-speaker="nine">
-            <span class="dialogue__label" aria-hidden="true">NINE:</span>
-            <span class="dialogue__text">What am I looking at?</span>
-          </p>
-
-          <p class="dialogue" data-speaker="ten">
+          <p class="dialogue dialogue--probe" data-speaker="ten" data-speaker-type="probe">
             <span class="dialogue__label" aria-hidden="true">TEN:</span>
-            <span class="dialogue__text">Earth. From very far away. And also from very close. At the same time.</span>
+            <span class="dialogue__text">
+              <span class="dialogue__highlight">
+                This feed is stitched from the same satellites that power the normal-era scoreboard
+                on the surface. Go home if you want kickoff times and tidy boxes. Stay if you want
+                to see what the cameras looked like when a field stopped fitting inside the lens.
+              </span>
+            </span>
           </p>
 
-          <p class="dialogue" data-speaker="nine">
+          <p class="dialogue dialogue--probe" data-speaker="nine" data-speaker-type="probe">
             <span class="dialogue__label" aria-hidden="true">NINE:</span>
-            <span class="dialogue__text">That doesn't make sense.</span>
+            <span class="dialogue__text">
+              <span class="dialogue__highlight">What am I looking at?</span>
+            </span>
           </p>
 
-          <p class="dialogue" data-speaker="juice" data-voice="juice">
+          <p class="dialogue dialogue--probe" data-speaker="ten" data-speaker-type="probe">
+            <span class="dialogue__label" aria-hidden="true">TEN:</span>
+            <span class="dialogue__text">
+              <span class="dialogue__highlight">
+                Earth. From very far away. And also from very close. At the same time.
+              </span>
+            </span>
+          </p>
+
+          <p class="dialogue dialogue--probe" data-speaker="nine" data-speaker-type="probe">
+            <span class="dialogue__label" aria-hidden="true">NINE:</span>
+            <span class="dialogue__text">
+              <span class="dialogue__highlight">That doesn't make sense.</span>
+            </span>
+          </p>
+
+          <p class="dialogue dialogue--probe" data-speaker="juice" data-speaker-type="probe" data-voice="juice">
             <span class="dialogue__label" aria-hidden="true">JUICE:</span>
-            <span class="dialogue__text">welcome to the rest of your life buddy</span>
+            <span class="dialogue__text">
+              <span class="dialogue__highlight">welcome to the rest of your life buddy</span>
+            </span>
           </p>
 
           <aside class="document document--newsletter">
@@ -75,19 +96,27 @@
             </div>
           </aside>
 
-          <p class="dialogue" data-speaker="ten">
+          <p class="dialogue dialogue--probe" data-speaker="ten" data-speaker-type="probe">
             <span class="dialogue__label" aria-hidden="true">TEN:</span>
-            <span class="dialogue__text">You can pause the video if you need to. Nobody's keeping score up here.</span>
+            <span class="dialogue__text">
+              <span class="dialogue__highlight">
+                You can pause the video if you need to. Nobody's keeping score up here.
+              </span>
+            </span>
           </p>
 
-          <p class="dialogue" data-speaker="nine" data-punctuation="minimal">
+          <p class="dialogue dialogue--probe" data-speaker="nine" data-speaker-type="probe" data-punctuation="minimal">
             <span class="dialogue__label" aria-hidden="true">NINE:</span>
-            <span class="dialogue__text">Except Juice</span>
+            <span class="dialogue__text">
+              <span class="dialogue__highlight">Except Juice</span>
+            </span>
           </p>
 
-          <p class="dialogue" data-speaker="juice" data-voice="juice">
+          <p class="dialogue dialogue--probe" data-speaker="juice" data-speaker-type="probe" data-voice="juice">
             <span class="dialogue__label" aria-hidden="true">JUICE:</span>
-            <span class="dialogue__text">im always keepin score u know that</span>
+            <span class="dialogue__text">
+              <span class="dialogue__highlight">im always keepin score u know that</span>
+            </span>
           </p>
         </div>
       </article>
@@ -96,6 +125,7 @@
     <footer class="site-footer">
       <nav class="chapter-nav" aria-label="Chapter navigation">
         <a rel="prev" href="/chapters/chapter-03.html">Previous</a>
+        <a href="/">Home</a>
         <a href="/hub.html">All chapters</a>
         <span rel="next">Next</span>
       </nav>
