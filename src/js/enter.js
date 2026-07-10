@@ -1,4 +1,4 @@
-const STORAGE_KEY = 'gywp-entered'
+const STORAGE_KEY = '20026-entered'
 
 export function initEnter() {
   const gate = document.getElementById('entry-gate')

@@ -60,14 +60,30 @@
 }
 
 [data-dialogue-mode="20020"] .dialogue[data-speaker-type="human"] {
-  margin: 0.85rem 0;
-  line-height: 1.55;
+  margin: var(--probe-turn-gap) 0 0;
+  line-height: 1.45;
+}
+
+[data-dialogue-mode="20020"] .dialogue[data-speaker-type="human"]:first-child {
+  margin-top: 0;
 }
 
 /* 20020: probe highlight blocks */
 [data-dialogue-mode="20020"] .dialogue--probe {
-  margin: 0.75rem 0;
-  line-height: 1.45;
+  margin: var(--probe-turn-gap) 0 0;
+  padding: 0;
+  line-height: 1.35;
+  text-align: left;
+}
+
+[data-dialogue-mode="20020"] .chapter__content > .dialogue--probe:first-child {
+  margin-top: 0;
+}
+
+[data-dialogue-mode="20020"] .dialogue--probe[data-speaker="ten"] + .dialogue--probe[data-speaker="ten"],
+[data-dialogue-mode="20020"] .dialogue--probe[data-speaker="nine"] + .dialogue--probe[data-speaker="nine"],
+[data-dialogue-mode="20020"] .dialogue--probe[data-speaker="juice"] + .dialogue--probe[data-speaker="juice"] {
+  margin-top: var(--probe-run-gap);
 }
 
 [data-dialogue-mode="20020"] .dialogue--probe .dialogue__text {
@@ -76,11 +92,10 @@
 }
 
 [data-dialogue-mode="20020"] .dialogue--probe .dialogue__highlight {
-  display: inline-block;
-  max-width: 100%;
-  padding: 0.2em 0.35em;
+  display: inline;
+  padding: var(--probe-block-pad-y) var(--probe-block-pad-x);
   color: #000000;
-  line-height: 1.45;
+  line-height: 1.35;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
@@ -97,34 +112,45 @@
   background: var(--color-juice);
 }
 
-/* Nine — indented middle-left */
-[data-dialogue-mode="20020"] .dialogue--probe[data-speaker="nine"] {
-  margin-left: 15%;
-  margin-right: 5%;
-  text-align: left;
-}
-
-/* Ten — flush left */
 [data-dialogue-mode="20020"] .dialogue--probe[data-speaker="ten"] {
-  margin-left: 0;
-  margin-right: 10%;
-  text-align: left;
+  margin-left: var(--indent-ten);
+  margin-right: 0;
 }
 
-/* Juice — centered */
-[data-dialogue-mode="20020"] .dialogue--probe[data-speaker="juice"] {
-  margin-left: 0;
+[data-dialogue-mode="20020"] .dialogue--probe[data-speaker="nine"] {
+  margin-left: var(--indent-nine);
   margin-right: 0;
-  text-align: center;
+}
+
+[data-dialogue-mode="20020"] .dialogue--probe[data-speaker="juice"] {
+  margin-left: var(--indent-juice);
+  margin-right: 0;
 }
 
 [data-dialogue-mode="20020"] .dialogue--probe .dialogue__highlight .mono {
   color: inherit;
+  font-family: inherit;
+  font-size: inherit;
 }
 
-/* Voice: Juice */
-.dialogue[data-voice="juice"] .dialogue__text,
-.dialogue[data-speaker="juice"] .dialogue__text {
+/* Juice — all lowercase inside blocks */
+[data-dialogue-mode="20020"] .dialogue--probe[data-speaker="juice"] .dialogue__highlight {
+  text-transform: lowercase;
+}
+
+/* Voice fallback for any juice line */
+[data-dialogue-mode="20020"] .dialogue[data-voice="juice"] .dialogue__highlight,
+[data-dialogue-mode="20020"] .dialogue[data-voice="juice"] .dialogue__text {
+  text-transform: lowercase;
+}
+
+[data-dialogue-mode="20020"] .dialogue[data-voice="juice"] .dialogue__text {
+  text-transform: lowercase;
+}
+
+/* 17776: Juice lowercase */
+[data-dialogue-mode="17776"] .dialogue[data-voice="juice"] .dialogue__text,
+[data-dialogue-mode="17776"] .dialogue[data-speaker="juice"] .dialogue__text {
   text-transform: lowercase;
 }
 
