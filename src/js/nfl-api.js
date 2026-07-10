@@ -52,10 +52,12 @@ function parseTeam(competitor) {
   }
 
   const { team, score } = competitor
+  const abbr = (team.abbreviation ?? '').toLowerCase()
   const logo =
+    team.logo ??
     team.logos?.find((entry) => entry.rel?.includes('default'))?.href ??
     team.logos?.[0]?.href ??
-    `https://a.espn.com/i/teamlogos/nfl/500/scoreboard/${team.abbreviation?.toLowerCase()}.png`
+    (abbr ? `${import.meta.env.BASE_URL}nfl-logos/${abbr}.png` : '')
 
   return {
     name: team.displayName ?? team.name,

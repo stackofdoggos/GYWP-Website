@@ -132,7 +132,7 @@ function renderGameCard(game) {
 
 function renderTeam(team, showScore) {
   const logo = team.logo
-    ? `<img class="game-card__logo" src="${team.logo}" alt="" width="32" height="32" loading="lazy" />`
+    ? `<img class="game-card__logo" src="${team.logo}" alt="" width="32" height="32" loading="lazy" referrerpolicy="no-referrer" />`
     : ''
 
   return `
